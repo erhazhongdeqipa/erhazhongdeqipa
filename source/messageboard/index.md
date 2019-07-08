@@ -9,8 +9,7 @@ type: "messageboard"
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-<meting-js
-	server="netease"
+<meting-js server="netease"
 	type="song"
 	id="34779102"
 	autoplay="true">

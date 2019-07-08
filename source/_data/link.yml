@@ -1,0 +1,8 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: happyshark
+      link: https://happyshark.cn
+      avatar: https://www.duitang.com/blog/?id=1088391824
+      descr: cool~

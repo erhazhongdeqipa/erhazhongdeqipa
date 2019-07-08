@@ -26,7 +26,7 @@
     "hexo-wordcount": "^6.0.1",
     "travis": "^0.1.1"
   }
-}
+},
 "scripts": {
   "deploy": "hexo clean && hexo g -d"
-},
+}

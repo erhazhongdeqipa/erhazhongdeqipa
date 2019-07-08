@@ -24,9 +24,10 @@
     "hexo-server": "^0.3.3",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-wordcount": "^6.0.1",
-    "travis": "^0.1.1"
+    "travis": "^0.1.1",
+    "yuque-hexo": "^1.6.1"
   },
- "yuqueConfig": {
+  "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "hpshark",
     "repo": "gdp3av",

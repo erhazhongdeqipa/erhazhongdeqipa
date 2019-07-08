@@ -3,17 +3,8 @@ node_js: stable
 cache:
   directories:
   - node_modules
-notifications: 
-email:
-  recipients:
-  - 2945330546@qq.com
-  on_success: change
-  on_failure: always
 
 before_install:
-- export TZ='Asia/Shanghai'
-- npm install hexo-cli -g
-- chmod +x ./commit-message.sh
 - git config user.name "erhazhongdeqipa"
 - git config user.email "2945330546@qq.com"
 - sed -i'' "s~https://github.com/erhazhongdeqipa/erhazhongdeqipa.github.io.git~https://${BlogToken}@github.com/erhazhongdeqipa/erhazhongdeqipa.github.io.git~" _config.yml
@@ -22,12 +13,9 @@ install:
 - npm install hexo-deployer-git --save
 script:
 - hexo clean
-- hexo g 
+- hexo g
 - hexo d
 
-after_script:
-- "./commit-message.sh"
-# S: Build Lifecycle
 branches:
   only:
   - master

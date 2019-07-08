@@ -79,7 +79,7 @@ theme: Butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:erhazhongdeqipa/erhazhongdeqipa.github.io.git
+  repo: https://github.com/erhazhongdeqipa/erhazhongdeqipa.github.io.git
   branch: master
 
 search:

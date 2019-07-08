@@ -9,9 +9,7 @@ email:
   - 2945330546@qq.com
   on_success: change
   on_failure: always
-branches:
-  only:
-  - master
+
 before_install:
 - export TZ='Asia/Shanghai'
 - npm install hexo-cli -g
@@ -27,7 +25,9 @@ script:
 after_script:
 - "./commit-message.sh"
 # S: Build Lifecycle
-
+branches:
+  only:
+  - master
 env:
   global:
-    secure: fAVs4P3wpudk5sGVGJr5iQRXcpV9bbzItgwFJZqPFJnTf9hz7ixIPdhp+1OnoO9LnMjpJjD7SmvQjl/srClTQkVKyjfFZg2TXWTy0PMb7S0QdmVl4+EodD+YQJScAlHuUC642qUtj4dRts1qogqEWV4cUGeihv+Yq2GqAHdCfcxMX0wfHBLo1KpIlMgoCOKqjI5FXtf8kuXEqkN2HxTu4AVusLq2HQiZ4cFzHxtDF/VT6CmD53dvMmKFaCDpByL1RRUx+xy7EGZN6LmWMEhahlWXexZO8U8z+r40PbFn/DyeDZgdltYngpUROvuUOBku2wa07J8hxnYSYf8X+WqIbpLaP6RrIv+FyJ7Tixt9NQTmsUWl4Hzja9pS/z/AlCNDp6FlIh0Aed7GXYf87FyQ8xP6QAIRSbhEETVELIlJ7qPAu2RfapTPPCp7knmTQrtfcuvG50ud+/LQQIyFw9v5PvsoJt6cDCKsF9R3JA9/MgZre8JQdZUBJvXM98Kljh7qpRiBDB5mtRYs1Z9kJwi82iVKOmLQ0/KEtbrCNOmEXyNI+h97XUwRfRgjxOcHXi6unfDXLQr6IKd5+9Sj77hQ1VJjwGKbrhpMpnHhSzHz8XNljzSbqxCB1za7qa7hSLlMqCgIKVg2izn9VM77obtQhl1ARcBfutqN2sy4TImQYgc=
+   - GH_REF: /github.com/erhazhongdeqipa/erhazhongdeqipa.github.io.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git

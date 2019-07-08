@@ -1,35 +1,40 @@
 language: node_js
 node_js: stable
-
+cache:
+  directories:
+  - node_modules
+notifications: 
+email:
+  recipients:
+  - 2945330546@qq.com
+  on_success: change
+  on_failure: always
+branches:
+  only:
+  - master
+before_install:
+- export TZ='Asia/Shanghai'
+- npm install hexo-cli -g
+- chmod +x ./commit-message.sh
+install:
+- npm install
+- npm install hexo-deployer-git --save
+script:
+- hexo clean
+- hexo generate
+after_script:
+- "./commit-message.sh"
 # S: Build Lifecycle
 install:
   - npm install
 
-#before_script:
- # - npm install -g gulp
 
-script:
-  - hexo clean
-  - hexo g
 
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "erhazhongdeqipa" --{GitHub账户名称}
-  - git config user.email "1509573865@qq.com" --{Github账户邮箱}
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
 
-branches:
-  only:
-    - master --{Hexo源码分支名称}
+
+
+
+
 env:
- global:
-   - GH_REF: git@github.com:erhazhongdeqipa/erhazhongdeqipa.git --{仓库地址}
-
-# .travis.yml 配置
-cache:
-  directories:
-    - node_modules
+  global:
+    secure: fAVs4P3wpudk5sGVGJr5iQRXcpV9bbzItgwFJZqPFJnTf9hz7ixIPdhp+1OnoO9LnMjpJjD7SmvQjl/srClTQkVKyjfFZg2TXWTy0PMb7S0QdmVl4+EodD+YQJScAlHuUC642qUtj4dRts1qogqEWV4cUGeihv+Yq2GqAHdCfcxMX0wfHBLo1KpIlMgoCOKqjI5FXtf8kuXEqkN2HxTu4AVusLq2HQiZ4cFzHxtDF/VT6CmD53dvMmKFaCDpByL1RRUx+xy7EGZN6LmWMEhahlWXexZO8U8z+r40PbFn/DyeDZgdltYngpUROvuUOBku2wa07J8hxnYSYf8X+WqIbpLaP6RrIv+FyJ7Tixt9NQTmsUWl4Hzja9pS/z/AlCNDp6FlIh0Aed7GXYf87FyQ8xP6QAIRSbhEETVELIlJ7qPAu2RfapTPPCp7knmTQrtfcuvG50ud+/LQQIyFw9v5PvsoJt6cDCKsF9R3JA9/MgZre8JQdZUBJvXM98Kljh7qpRiBDB5mtRYs1Z9kJwi82iVKOmLQ0/KEtbrCNOmEXyNI+h97XUwRfRgjxOcHXi6unfDXLQr6IKd5+9Sj77hQ1VJjwGKbrhpMpnHhSzHz8XNljzSbqxCB1za7qa7hSLlMqCgIKVg2izn9VM77obtQhl1ARcBfutqN2sy4TImQYgc=

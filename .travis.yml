@@ -20,7 +20,9 @@ install:
 - npm install
 - npm install hexo-deployer-git --save
 script:
-- hexo clean && hexo g -d
+- hexo clean
+- hexo g 
+- hexo -d
 
 after_script:
 - "./commit-message.sh"

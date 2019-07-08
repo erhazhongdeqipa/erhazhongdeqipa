@@ -22,6 +22,8 @@ install:
 script:
 - hexo clean
 - hexo generate
+- hexo d
+
 after_script:
 - "./commit-message.sh"
 # S: Build Lifecycle

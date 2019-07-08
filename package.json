@@ -31,7 +31,6 @@
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "hpshark",
     "repo": "gdp3av",
-    "onlyPublished": true,
     "cachePath": "yuque.json",
     "mdNameFormat": "title",
     "postPath": "source/_posts/yuque"

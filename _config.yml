@@ -74,6 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Butterfly
+plugins: hexo-generate-feed
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -136,3 +137,6 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
+
+aplayer:
+  meting: true

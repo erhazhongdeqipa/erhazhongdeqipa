@@ -276,10 +276,6 @@ google_site_verification:
 # See: https://www.bing.com/webmaster/
 bing_site_verification:
 
-# Yandex Webmaster tools verification setting
-# See: https://webmaster.yandex.ru/
-#yandex_site_verification:
-
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
 baidu_site_verification:
@@ -361,6 +357,14 @@ font:
   enable: false
   font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB,"Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif
   code-font: consolas, Menlo, "PingFang SC", "Microsoft JhengHei","Microsoft YaHei", monospace, Helvetica Neue For Number
+
+
+#水平分隔綫
+hr:
+  enable: false
+  #fontawesome上圖標的Unicode
+  icon: '\f21c'
+  icon-top: -20px
 
 # 主頁subtitle
 subtitle: 

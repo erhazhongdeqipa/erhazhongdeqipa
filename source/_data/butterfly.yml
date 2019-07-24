@@ -367,8 +367,9 @@ font:
 # 主頁subtitle
 subtitle: 
   enable: true
-  sub1: I don't know
-  sub2: 我也不知道填啥2333先这样把
+  sub1: 今日快乐,今日享受
+  sub2: cool~
+
 
 #側邊欄顯示設置
 aside:
